@@ -1,5 +1,8 @@
 # diagramming-skill
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
+[![Release](https://img.shields.io/github/v/tag/CtriXin/diagramming-skill?label=release)](https://github.com/CtriXin/diagramming-skill/tags)
+
 一个给 `Codex` 和 `Claude` 共用的画图 skill，默认走 `Mermaid`，并产出适合本地保存和版本管理的三件套：`*.mmd`、`*-outline.md`、`*.html`。
 
 建议 GitHub description：
@@ -127,3 +130,5 @@ diagramming-skill/
 - 这个仓库刻意采用“文本优先”的画图策略
 - 聊天界面的内嵌渲染不是必须条件
 - `Excalidraw remote` 不是默认路径
+- 发布历史见 [`CHANGELOG.md`](./CHANGELOG.md)
+- 贡献说明见 [`CONTRIBUTING.zh-CN.md`](./CONTRIBUTING.zh-CN.md)

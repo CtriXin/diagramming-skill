@@ -1,5 +1,8 @@
 # diagramming-skill
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
+[![Release](https://img.shields.io/github/v/tag/CtriXin/diagramming-skill?label=release)](https://github.com/CtriXin/diagramming-skill/tags)
+
 Mermaid-first diagramming skill for Codex and Claude. It creates practical local outputs for diagrams and mind maps: `*.mmd`, `*-outline.md`, and browser-openable `*.html`.
 
 Suggested GitHub description:
@@ -129,3 +132,5 @@ diagramming-skill/
 - This repository is intentionally text-first.
 - Inline widget rendering is optional, not required.
 - `Excalidraw remote` is not the default path.
+- See [`CHANGELOG.md`](./CHANGELOG.md) for release history.
+- See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for contribution guidance.
