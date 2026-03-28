@@ -1,0 +1,7 @@
+interface:
+  display_name: "Diagramming Skill"
+  short_description: "Mermaid-first diagrams and mind maps for AI agents"
+  default_prompt: "Use $diagramming to create a Mermaid diagram bundle with mmd, outline, and html outputs."
+
+policy:
+  allow_implicit_invocation: true

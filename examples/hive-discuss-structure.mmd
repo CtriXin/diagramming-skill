@@ -1,0 +1,42 @@
+flowchart TD
+    U["Entry Points"]
+    S1["/hive-discuss skill"]
+    S2["/hive-a2a skill"]
+    API["direct import / CLI"]
+
+    CORE["hive-discuss
+standalone capability package"]
+
+    D["runDiscussion()"]
+    A["runA2aReview()"]
+    C["runCrossReview()"]
+    B["runDebate() / runGroupDebate()"]
+
+    CFG["Config Layer"]
+    R1["model-routes.json"]
+    R2["discuss.json"]
+
+    CALLER["ModelCaller"]
+    SDK["createDefaultCaller()"]
+
+    OUT["Outputs"]
+
+    U --> S1
+    U --> S2
+    U --> API
+    S1 --> CORE
+    S2 --> CORE
+    API --> CORE
+    CORE --> D
+    CORE --> A
+    CORE --> C
+    CORE --> B
+    R1 --> CFG
+    R2 --> CFG
+    CFG --> CORE
+    CALLER --> SDK
+    SDK --> CORE
+    D --> OUT
+    A --> OUT
+    C --> OUT
+    B --> OUT

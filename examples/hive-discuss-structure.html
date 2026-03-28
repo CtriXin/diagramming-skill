@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>hive-discuss Structure</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f7f3;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+    }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: linear-gradient(180deg, #f3f4f6 0%, #f8fafc 100%);
+      color: var(--text);
+    }
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 24px;
+    }
+    p {
+      margin: 0 0 20px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    pre.mermaid {
+      margin: 0;
+      overflow: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>hive-discuss Structure</h1>
+      <p>Open this file in a browser to view the Mermaid diagram.</p>
+      <pre class="mermaid">flowchart TD
+    U[&quot;Entry Points&quot;]
+    S1[&quot;/hive-discuss skill&quot;]
+    S2[&quot;/hive-a2a skill&quot;]
+    API[&quot;direct import / CLI&quot;]
+
+    CORE[&quot;hive-discuss
+standalone capability package&quot;]
+
+    D[&quot;runDiscussion()&quot;]
+    A[&quot;runA2aReview()&quot;]
+    C[&quot;runCrossReview()&quot;]
+    B[&quot;runDebate() / runGroupDebate()&quot;]
+
+    CFG[&quot;Config Layer&quot;]
+    R1[&quot;model-routes.json&quot;]
+    R2[&quot;discuss.json&quot;]
+
+    CALLER[&quot;ModelCaller&quot;]
+    SDK[&quot;createDefaultCaller()&quot;]
+
+    OUT[&quot;Outputs&quot;]
+
+    U --&gt; S1
+    U --&gt; S2
+    U --&gt; API
+    S1 --&gt; CORE
+    S2 --&gt; CORE
+    API --&gt; CORE
+    CORE --&gt; D
+    CORE --&gt; A
+    CORE --&gt; C
+    CORE --&gt; B
+    R1 --&gt; CFG
+    R2 --&gt; CFG
+    CFG --&gt; CORE
+    CALLER --&gt; SDK
+    SDK --&gt; CORE
+    D --&gt; OUT
+    A --&gt; OUT
+    C --&gt; OUT
+    B --&gt; OUT
+</pre>
+    </div>
+  </div>
+  <script type="module">
+    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+    mermaid.initialize({
+      startOnLoad: true,
+      securityLevel: "loose",
+      theme: "default"
+    });
+  </script>
+</body>
+</html>
