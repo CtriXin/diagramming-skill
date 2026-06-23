@@ -11,6 +11,25 @@ Suggested GitHub description:
 
 [中文文档](./README.zh-CN.md)
 
+## Quick Start
+
+Just describe what you need in natural language:
+
+> "Draw me a user login flowchart"
+
+The skill produces Mermaid code you can paste anywhere:
+
+```mermaid
+flowchart TD
+    A[User enters credentials] --> B{Valid?}
+    B -->|Yes| C[Create session]
+    C --> D[Redirect to dashboard]
+    B -->|No| E[Show error]
+    E --> A
+```
+
+Plus a matching text outline and a local HTML preview — no external service required.
+
 ## Why
 
 Most AI drawing flows break in one of these places:
